@@ -1,0 +1,116 @@
+{
+  "n": 77,
+  "n_scored": 77,
+  "tm_mean": 57.616883116883116,
+  "tm_median": 58.0,
+  "nanomelt_mean": 66.81974025974024,
+  "nanomelt_median": 67.11,
+  "bias_mean": 9.202857142857141,
+  "vs_tm": {
+    "n": 77,
+    "mae": 9.389350649350646,
+    "rmse": 11.0443913015059,
+    "spearman": 0.12569615993592423,
+    "pearson": 0.12756565403554007
+  },
+  "spearman": {
+    "n": 77,
+    "spearman": 0.1256961599359242,
+    "pvalue": 0.2760367840479942
+  },
+  "residual_spearman": {
+    "n": 77,
+    "spearman": 0.18331924451977866,
+    "pvalue": 0.11051897731682035
+  },
+  "dummy_library_median": {
+    "n": 77,
+    "mae": 3.824675324675325,
+    "rmse": 4.797523711899063,
+    "spearman": null,
+    "pearson": null
+  },
+  "per_target": {
+    "Bemisia_tabaci__Heat_shock_proteins_70": {
+      "n": 13,
+      "tm_mean": 56.23076923076923,
+      "nanomelt_mean": 61.35846153846155,
+      "spearman": {
+        "n": 13,
+        "spearman": 0.6269221485436448,
+        "pvalue": 0.02183817438328201
+      }
+    },
+    "Bemisia_tabaci__Trehalase": {
+      "n": 13,
+      "tm_mean": 59.38461538461539,
+      "nanomelt_mean": 66.47692307692306,
+      "spearman": {
+        "n": 13,
+        "spearman": -0.12083752915371876,
+        "pvalue": 0.6941480280335459
+      }
+    },
+    "Helicoverpa_armigera__Chitin_binding_domain": {
+      "n": 2,
+      "tm_mean": 54.0,
+      "nanomelt_mean": 69.87,
+      "spearman": {
+        "n": 2,
+        "spearman": null,
+        "pvalue": null
+      }
+    },
+    "Helicoverpa_armigera__Chitin_deacetylases": {
+      "n": 19,
+      "tm_mean": 60.89473684210526,
+      "nanomelt_mean": 68.08894736842106,
+      "spearman": {
+        "n": 19,
+        "spearman": 0.27056559579295053,
+        "pvalue": 0.2625605106529785
+      }
+    },
+    "Helicoverpa_armigera__Chitin_synthase": {
+      "n": 8,
+      "tm_mean": 55.5,
+      "nanomelt_mean": 67.69625,
+      "spearman": {
+        "n": 8,
+        "spearman": -0.2515015150017844,
+        "pvalue": 0.5479426035598268
+      }
+    },
+    "Helicoverpa_armigera__Trehalase": {
+      "n": 14,
+      "tm_mean": 54.17857142857143,
+      "nanomelt_mean": 68.73428571428573,
+      "spearman": {
+        "n": 14,
+        "spearman": 0.5089203046921653,
+        "pvalue": 0.06309337568530493
+      }
+    },
+    "Spodoptera_frugiperda__Chitin_deacetylases": {
+      "n": 6,
+      "tm_mean": 59.333333333333336,
+      "nanomelt_mean": 68.36166666666666,
+      "spearman": {
+        "n": 6,
+        "spearman": -0.2070196678027063,
+        "pvalue": 0.69390663403457
+      }
+    },
+    "Spodoptera_frugiperda__Chitin_synthase": {
+      "n": 2,
+      "tm_mean": 55.0,
+      "nanomelt_mean": 67.905,
+      "spearman": {
+        "n": 2,
+        "spearman": null,
+        "pvalue": null
+      }
+    }
+  },
+  "note": "Zero-shot published NanoMelt ensemble (SVR ESM-1b + SVR ESM-2 t30 + GPR VHSE + GPR one-hot, ridge stack). Tag-stripped VHH, ANARCI -align. Dummy is the constant library-median Tm, not GroupKFold."
+}

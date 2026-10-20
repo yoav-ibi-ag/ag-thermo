@@ -1,0 +1,207 @@
+{
+  "baseline_rho0": 0.214,
+  "assumptions": {
+    "pooled_within_target_tm_sd": 4.376939561989685
+  },
+  "per_target": {
+    "Bemisia_tabaci__Heat_shock_proteins_70": {
+      "n": 13,
+      "tm_sd": 3.515533296524776,
+      "tm_range": [
+        51.0,
+        64.0
+      ],
+      "nanomelt_within_rho": 0.6269221485436448
+    },
+    "Bemisia_tabaci__Trehalase": {
+      "n": 13,
+      "tm_sd": 4.9923017660270625,
+      "tm_range": [
+        47.0,
+        68.0
+      ],
+      "nanomelt_within_rho": -0.12083752915371877
+    },
+    "Helicoverpa_armigera__Chitin_deacetylases": {
+      "n": 19,
+      "tm_sd": 4.1885390829169555,
+      "tm_range": [
+        52.0,
+        67.0
+      ],
+      "nanomelt_within_rho": 0.27056559579295053
+    },
+    "Helicoverpa_armigera__Chitin_synthase": {
+      "n": 8,
+      "tm_sd": 6.90755280213519,
+      "tm_range": [
+        46.0,
+        67.0
+      ],
+      "nanomelt_within_rho": -0.2515015150017844
+    },
+    "Helicoverpa_armigera__Trehalase": {
+      "n": 14,
+      "tm_sd": 2.8528470452753445,
+      "tm_range": [
+        50.0,
+        58.5
+      ],
+      "nanomelt_within_rho": 0.5089203046921653
+    },
+    "Spodoptera_frugiperda__Chitin_deacetylases": {
+      "n": 6,
+      "tm_sd": 2.0655911179772892,
+      "tm_range": [
+        58.0,
+        62.0
+      ],
+      "nanomelt_within_rho": -0.20701966780270628
+    }
+  },
+  "ceiling": {
+    "assay_err_0.5C": {
+      "reliability": 0.9869503486385313,
+      "rho_ceiling": 0.9934537476090828
+    },
+    "assay_err_1.0C": {
+      "reliability": 0.9478013945541249,
+      "rho_ceiling": 0.973550920370437
+    },
+    "assay_err_1.5C": {
+      "reliability": 0.8825531377467812,
+      "rho_ceiling": 0.9394429933459407
+    },
+    "assay_err_2.0C": {
+      "reliability": 0.7912055782164998,
+      "rho_ceiling": 0.8894973739233297
+    },
+    "assay_err_2.5C": {
+      "reliability": 0.673758715963281,
+      "rho_ceiling": 0.8208280672365443
+    },
+    "assay_err_3.0C": {
+      "reliability": 0.5302125509871247,
+      "rho_ceiling": 0.7281569549122804
+    },
+    "widen_range_at_1.5C_err": {
+      "rho_0.5": {
+        "required_within_target_tm_sd": 1.7320508075688774,
+        "fold_vs_current": 0.3957218926691132
+      },
+      "rho_0.6": {
+        "required_within_target_tm_sd": 1.875,
+        "fold_vs_current": 0.42838151485638876
+      },
+      "rho_0.7": {
+        "required_within_target_tm_sd": 2.100420126042015,
+        "fold_vs_current": 0.4798832828953202
+      },
+      "rho_0.8": {
+        "required_within_target_tm_sd": 2.5000000000000004,
+        "fold_vs_current": 0.5711753531418517
+      }
+    }
+  },
+  "power": {
+    "n_to_detect_vs_zero_80pct": {
+      "rho_0.3": 84.9,
+      "rho_0.4": 46.7,
+      "rho_0.5": 29.0,
+      "rho_0.6": 19.3,
+      "rho_0.7": 13.4
+    },
+    "n_to_beat_baseline_rho0_80pct": {
+      "rho_0.4": 148.3,
+      "rho_0.5": 59.1,
+      "rho_0.6": 30.3,
+      "rho_0.7": 17.6,
+      "rho_0.8": 11.0
+    },
+    "total_binders_to_beat_baseline_80pct": {
+      "T4_targets": {
+        "rho_0.4": 157.0,
+        "rho_0.5": 68.0,
+        "rho_0.6": 39.0
+      },
+      "T6_targets": {
+        "rho_0.4": 163.0,
+        "rho_0.5": 74.0,
+        "rho_0.6": 45.0
+      },
+      "T8_targets": {
+        "rho_0.4": 169.0,
+        "rho_0.5": 80.0,
+        "rho_0.6": 51.0
+      }
+    }
+  },
+  "learning_curve": {
+    "zeroshot_bootstrap_centered": {
+      "5": {
+        "median_rho": 0.19999999999999998,
+        "ci95": [
+          -0.8207826816681234,
+          0.8999999999999998
+        ],
+        "p_rho_gt_0": 0.639
+      },
+      "8": {
+        "median_rho": 0.22823232620706077,
+        "ci95": [
+          -0.5952380952380953,
+          0.8073434177731839
+        ],
+        "p_rho_gt_0": 0.6875
+      },
+      "10": {
+        "median_rho": 0.22630075237438613,
+        "ci95": [
+          -0.4787878787878787,
+          0.7608087635185778
+        ],
+        "p_rho_gt_0": 0.733
+      },
+      "12": {
+        "median_rho": 0.21831256593408457,
+        "ci95": [
+          -0.43859649122807015,
+          0.7276575526682704
+        ],
+        "p_rho_gt_0": 0.7415
+      },
+      "15": {
+        "median_rho": 0.22262181181947674,
+        "ci95": [
+          -0.33006874379769147,
+          0.6733236870417565
+        ],
+        "p_rho_gt_0": 0.7805
+      },
+      "20": {
+        "median_rho": 0.236827956046898,
+        "ci95": [
+          -0.24603794087667485,
+          0.6096883835758734
+        ],
+        "p_rho_gt_0": 0.83
+      },
+      "25": {
+        "median_rho": 0.2222223068466379,
+        "ci95": [
+          -0.2031613507010577,
+          0.5670090942746567
+        ],
+        "p_rho_gt_0": 0.848
+      },
+      "30": {
+        "median_rho": 0.221057514745431,
+        "ci95": [
+          -0.15173787542374287,
+          0.5390045303558569
+        ],
+        "p_rho_gt_0": 0.8805
+      }
+    }
+  }
+}

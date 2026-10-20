@@ -1,0 +1,14 @@
+# Modeling / analysis (ranker, bake-off, comparison, power analysis)
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+joblib
+
+# ESM-C embedding for scoring new sequences (heavy; GPU recommended)
+# installed separately in the `esmfold2` conda env:
+#   torch, fair-esm / esm (EvolutionaryScale), accelerate, safetensors
+# ESM-C weights are loaded from the local HuggingFace cache.
+
+# PPTStab comparison uses its own pinned environment (see upstream PPTStab repo).

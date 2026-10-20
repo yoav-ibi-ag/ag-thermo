@@ -1,0 +1,13 @@
+{
+  "n_tempro_rows": 567,
+  "n_nanomelt_640": 640,
+  "n_nanomelt_83": 83,
+  "n_unique_seq": 764,
+  "n_tempro_only": 45,
+  "n_nanomelt_only": 197,
+  "n_both": 522,
+  "tm_min": 26.64,
+  "tm_median": 67.0,
+  "tm_max": 98.23,
+  "note": "Experimental Tm only (TEMPRO/NbThermo labels + NanoMelt measured Tm). Duplicate sequences averaged. No Meltome/PPTStab proteome Tm."
+}

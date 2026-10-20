@@ -1,0 +1,326 @@
+{
+  "baseline_zeroshot_rho": 0.214,
+  "ceiling_rho": 0.94,
+  "headline": "LOO within-target Spearman (n-weighted), pairwise ranker",
+  "results": {
+    "esmc6b+nanomelt+biophys": {
+      "n_weighted_mean_spearman": 0.4611548815854108,
+      "per_target": {
+        "Bemisia_tabaci__Heat_shock_proteins_70": {
+          "n": 13,
+          "spearman": 0.21053358566534172
+        },
+        "Bemisia_tabaci__Trehalase": {
+          "n": 13,
+          "spearman": 0.3634013160602174
+        },
+        "Helicoverpa_armigera__Chitin_deacetylases": {
+          "n": 19,
+          "spearman": 0.6472353467988227
+        },
+        "Helicoverpa_armigera__Chitin_synthase": {
+          "n": 8,
+          "spearman": 0.45509797952703834
+        },
+        "Helicoverpa_armigera__Trehalase": {
+          "n": 14,
+          "spearman": 0.6444842286494671
+        },
+        "Spodoptera_frugiperda__Chitin_deacetylases": {
+          "n": 6,
+          "spearman": 0.20701966780270628
+        }
+      }
+    },
+    "esmc600+nanomelt+biophys": {
+      "n_weighted_mean_spearman": 0.45020427068846397,
+      "per_target": {
+        "Bemisia_tabaci__Heat_shock_proteins_70": {
+          "n": 13,
+          "spearman": 0.14958965297274282
+        },
+        "Bemisia_tabaci__Trehalase": {
+          "n": 13,
+          "spearman": 0.6768696268602523
+        },
+        "Helicoverpa_armigera__Chitin_deacetylases": {
+          "n": 19,
+          "spearman": 0.7338870735560421
+        },
+        "Helicoverpa_armigera__Chitin_synthase": {
+          "n": 8,
+          "spearman": 0.6107893935757621
+        },
+        "Helicoverpa_armigera__Trehalase": {
+          "n": 14,
+          "spearman": -0.031113031727905305
+        },
+        "Spodoptera_frugiperda__Chitin_deacetylases": {
+          "n": 6,
+          "spearman": 0.6210590034081188
+        }
+      }
+    },
+    "esmc600": {
+      "n_weighted_mean_spearman": 0.43750021673743233,
+      "per_target": {
+        "Bemisia_tabaci__Heat_shock_proteins_70": {
+          "n": 13,
+          "spearman": 0.2049932281478327
+        },
+        "Bemisia_tabaci__Trehalase": {
+          "n": 13,
+          "spearman": 0.5575852254053717
+        },
+        "Helicoverpa_armigera__Chitin_deacetylases": {
+          "n": 19,
+          "spearman": 0.5588152174547212
+        },
+        "Helicoverpa_armigera__Chitin_synthase": {
+          "n": 8,
+          "spearman": 0.7425282823862205
+        },
+        "Helicoverpa_armigera__Trehalase": {
+          "n": 14,
+          "spearman": 0.03555775054617749
+        },
+        "Spodoptera_frugiperda__Chitin_deacetylases": {
+          "n": 6,
+          "spearman": 0.8280786712108251
+        }
+      }
+    },
+    "esmc6b": {
+      "n_weighted_mean_spearman": 0.39113724480435214,
+      "per_target": {
+        "Bemisia_tabaci__Heat_shock_proteins_70": {
+          "n": 13,
+          "spearman": 0.0664842902101079
+        },
+        "Bemisia_tabaci__Trehalase": {
+          "n": 13,
+          "spearman": 0.4188824330159758
+        },
+        "Helicoverpa_armigera__Chitin_deacetylases": {
+          "n": 19,
+          "spearman": 0.6843718011233454
+        },
+        "Helicoverpa_armigera__Chitin_synthase": {
+          "n": 8,
+          "spearman": 0.31138282809744733
+        },
+        "Helicoverpa_armigera__Trehalase": {
+          "n": 14,
+          "spearman": 0.3933576154170885
+        },
+        "Spodoptera_frugiperda__Chitin_deacetylases": {
+          "n": 6,
+          "spearman": 0.20701966780270628
+        }
+      }
+    },
+    "nanobert+nanomelt+biophys": {
+      "n_weighted_mean_spearman": 0.2048820681755133,
+      "per_target": {
+        "Bemisia_tabaci__Heat_shock_proteins_70": {
+          "n": 13,
+          "spearman": 0.31580037849801257
+        },
+        "Bemisia_tabaci__Trehalase": {
+          "n": 13,
+          "spearman": 0.6380328449912214
+        },
+        "Helicoverpa_armigera__Chitin_deacetylases": {
+          "n": 19,
+          "spearman": 0.4031957898091027
+        },
+        "Helicoverpa_armigera__Chitin_synthase": {
+          "n": 8,
+          "spearman": 0.8503146459584138
+        },
+        "Helicoverpa_armigera__Trehalase": {
+          "n": 14,
+          "spearman": -0.49558614823734876
+        },
+        "Spodoptera_frugiperda__Chitin_deacetylases": {
+          "n": 6,
+          "spearman": -0.8280786712108251
+        }
+      }
+    },
+    "nanomelt": {
+      "n_weighted_mean_spearman": 0.13153392684001478,
+      "per_target": {
+        "Bemisia_tabaci__Heat_shock_proteins_70": {
+          "n": 13,
+          "spearman": 0.31623506607953766
+        },
+        "Bemisia_tabaci__Trehalase": {
+          "n": 13,
+          "spearman": -0.10818817806372885
+        },
+        "Helicoverpa_armigera__Chitin_deacetylases": {
+          "n": 19,
+          "spearman": 0.2298923362946638
+        },
+        "Helicoverpa_armigera__Chitin_synthase": {
+          "n": 8,
+          "spearman": -0.4191691916696406
+        },
+        "Helicoverpa_armigera__Trehalase": {
+          "n": 14,
+          "spearman": 0.5089203046921653
+        },
+        "Spodoptera_frugiperda__Chitin_deacetylases": {
+          "n": 6,
+          "spearman": -0.20701966780270628
+        }
+      }
+    },
+    "nanobert": {
+      "n_weighted_mean_spearman": 0.07776214907204097,
+      "per_target": {
+        "Bemisia_tabaci__Heat_shock_proteins_70": {
+          "n": 13,
+          "spearman": 0.013850893793772481
+        },
+        "Bemisia_tabaci__Trehalase": {
+          "n": 13,
+          "spearman": 0.19140985349736644
+        },
+        "Helicoverpa_armigera__Chitin_deacetylases": {
+          "n": 19,
+          "spearman": 0.5420153928793421
+        },
+        "Helicoverpa_armigera__Chitin_synthase": {
+          "n": 8,
+          "spearman": 0.3592878785739777
+        },
+        "Helicoverpa_armigera__Trehalase": {
+          "n": 14,
+          "spearman": -0.37113402132572754
+        },
+        "Spodoptera_frugiperda__Chitin_deacetylases": {
+          "n": 6,
+          "spearman": -0.8280786712108251
+        }
+      }
+    },
+    "biophys": {
+      "n_weighted_mean_spearman": 0.029029117708693417,
+      "per_target": {
+        "Bemisia_tabaci__Heat_shock_proteins_70": {
+          "n": 13,
+          "spearman": 0.28255823339295866
+        },
+        "Bemisia_tabaci__Trehalase": {
+          "n": 13,
+          "spearman": -0.08322167543363758
+        },
+        "Helicoverpa_armigera__Chitin_deacetylases": {
+          "n": 19,
+          "spearman": 0.15031421988497248
+        },
+        "Helicoverpa_armigera__Chitin_synthase": {
+          "n": 8,
+          "spearman": 0.13173888881045848
+        },
+        "Helicoverpa_armigera__Trehalase": {
+          "n": 14,
+          "spearman": -0.13556392395730169
+        },
+        "Spodoptera_frugiperda__Chitin_deacetylases": {
+          "n": 6,
+          "spearman": -0.41403933560541256
+        }
+      }
+    }
+  },
+  "design_levers_biophys_stdcoef": [
+    {
+      "feature": "surfscore_sum",
+      "coef": 0.7893785717352285,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "sheet_aliphatic",
+      "coef": -0.597395007019587,
+      "direction": "lower->more stable"
+    },
+    {
+      "feature": "sap_mean",
+      "coef": -0.5480251161927383,
+      "direction": "lower->more stable"
+    },
+    {
+      "feature": "SAP_B_sap_score",
+      "coef": -0.42443055354802356,
+      "direction": "lower->more stable"
+    },
+    {
+      "feature": "iptm",
+      "coef": 0.35031024714125236,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "sheet_instability",
+      "coef": -0.30472657507358836,
+      "direction": "lower->more stable"
+    },
+    {
+      "feature": "hyd_patch_sasa_sum",
+      "coef": -0.29698601684044895,
+      "direction": "lower->more stable"
+    },
+    {
+      "feature": "sheet_pI",
+      "coef": -0.28520065861488475,
+      "direction": "lower->more stable"
+    },
+    {
+      "feature": "nb_len",
+      "coef": 0.2424208206946617,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "n_hyd_patches",
+      "coef": 0.160193475061384,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "sap_max",
+      "coef": -0.1463816154068759,
+      "direction": "lower->more stable"
+    },
+    {
+      "feature": "hyd_patch_sasa_max",
+      "coef": 0.1438045657575358,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "hyd_patch_sasa_mean",
+      "coef": -0.13691697428707433,
+      "direction": "lower->more stable"
+    },
+    {
+      "feature": "sap_pos_sum",
+      "coef": 0.09777801163650818,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "sheet_hydropathicity",
+      "coef": 0.09689646472250633,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "surfscore_pos_sum",
+      "coef": 0.03089730952311112,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "sap_sum",
+      "coef": 0.007129477001729634,
+      "direction": "higher->more stable"
+    }
+  ]
+}
