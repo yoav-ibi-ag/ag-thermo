@@ -43,6 +43,14 @@ FEATURE_COLS = [
     "iptm", "sheet_pI", "sheet_instability", "sheet_aliphatic", "sheet_hydropathicity",
     "nb_len", "SAP_B_sap_score",
 ]
+# Rosetta FastRelax monomer energy; ThermoMPNN site-saturation ddG landscape
+# (positive ddG = destabilizing) collapsed to per-nanobody summaries.
+ROSETTA_COLS = ["rosetta_total_reu", "rosetta_reu_per_res"]
+TMPNN_COLS = [
+    "tmpnn_ddg_mean", "tmpnn_ddg_std", "tmpnn_ddg_max", "tmpnn_ddg_min",
+    "tmpnn_frac_destab", "tmpnn_site_worst_mean", "tmpnn_site_worst_sum",
+]
+STRUCT_COLS = ROSETTA_COLS + TMPNN_COLS
 
 
 # --------------------------------------------------------------------- loaders
@@ -52,6 +60,10 @@ def load_master():
         ["pair_id", "nanomelt_tm"]]
     df = tm.merge(preds, on="pair_id", how="inner")
     assert len(df) == len(tm)
+    for rel, cols in ((ROOT / "data/tm_predictor/rosetta_features.csv", ROSETTA_COLS),
+                      (ROOT / "data/tm_predictor/thermompnn_features.csv", TMPNN_COLS)):
+        if rel.exists():
+            df = df.merge(pd.read_csv(rel)[["pair_id"] + cols], on="pair_id", how="left")
     return df.reset_index(drop=True)
 
 
@@ -77,6 +89,7 @@ def pairwise_rank_loo(X, y, tg, pca_k=None, C=1.0):
         tr = np.setdiff1d(np.arange(n), [h])
         sc = StandardScaler().fit(X[tr])
         Xtr, Xh = sc.transform(X[tr]), sc.transform(X[h][None])
+        Xtr, Xh = np.nan_to_num(Xtr), np.nan_to_num(Xh)  # scaled mean-impute
         if pca_k is not None and X.shape[1] > pca_k:
             k = min(pca_k, len(tr) - 1)
             pca = PCA(n_components=k).fit(Xtr)
@@ -126,12 +139,20 @@ def main():
         "esmc600": (npz_matrix(ROOT / "data/tm_predictor/inhouse_esmc_600m_tagstripped.npz", names), 16),
         "esmc6b": (esmc6b_matrix(names), 16),
         "nanobert": (npz_matrix(ROOT / "data/tm_predictor/inhouse_nanobert.npz", names), 12),
+        "rosetta": (df[ROSETTA_COLS].to_numpy(float), None),
+        "thermompnn": (df[TMPNN_COLS].to_numpy(float), None),
+        "struct": (df[STRUCT_COLS].to_numpy(float), None),
     }
     # combinations (concatenate standardized blocks is handled inside via StandardScaler)
     combos = {
         "esmc600+nanomelt+biophys": np.c_[reps["esmc600"][0], df[["nanomelt_tm"]].to_numpy(float), df[FEATURE_COLS].to_numpy(float)],
         "nanobert+nanomelt+biophys": np.c_[reps["nanobert"][0], df[["nanomelt_tm"]].to_numpy(float), df[FEATURE_COLS].to_numpy(float)],
         "esmc6b+nanomelt+biophys": np.c_[reps["esmc6b"][0], df[["nanomelt_tm"]].to_numpy(float), df[FEATURE_COLS].to_numpy(float)],
+        "esmc600+struct": np.c_[reps["esmc600"][0], df[STRUCT_COLS].to_numpy(float)],
+        "biophys+struct": np.c_[df[FEATURE_COLS].to_numpy(float), df[STRUCT_COLS].to_numpy(float)],
+        "esmc600+nanomelt+biophys+struct": np.c_[
+            reps["esmc600"][0], df[["nanomelt_tm"]].to_numpy(float),
+            df[FEATURE_COLS].to_numpy(float), df[STRUCT_COLS].to_numpy(float)],
     }
 
     results = {}
@@ -149,8 +170,9 @@ def main():
         loo_scores[name] = s
 
     # ----- design levers: interpretable biophysical ranker on ALL data -------
-    sc = StandardScaler().fit(df[FEATURE_COLS].to_numpy(float))
-    Xs = sc.transform(df[FEATURE_COLS].to_numpy(float))
+    lever_cols = FEATURE_COLS + STRUCT_COLS
+    Xl = df[lever_cols].to_numpy(float)
+    Xs = np.nan_to_num(StandardScaler().fit_transform(Xl))
     D, L = [], []
     for t in np.unique(tg):
         idx = np.where(tg == t)[0]
@@ -160,8 +182,17 @@ def main():
             d = Xs[a] - Xs[b]; lab = 1 if y[a] > y[b] else 0
             D.append(d); L.append(lab); D.append(-d); L.append(1 - lab)
     clf = LogisticRegression(C=1.0, fit_intercept=False, max_iter=5000).fit(np.array(D), np.array(L))
-    levers = sorted(zip(FEATURE_COLS, clf.coef_[0].tolist()),
+    levers = sorted(zip(lever_cols, clf.coef_[0].tolist()),
                     key=lambda kv: abs(kv[1]), reverse=True)
+
+    # The multivariate lever coefficients are unstable because the ThermoMPNN
+    # summaries are strongly collinear, so also report each feature on its own.
+    uni = []
+    for j, f in enumerate(lever_cols):
+        _, nw = within_target(y, Xl[:, j], tg)
+        if nw is not None:
+            uni.append({"feature": f, "within_target_spearman": nw})
+    uni.sort(key=lambda d: abs(d["within_target_spearman"]), reverse=True)
 
     report = {
         "baseline_zeroshot_rho": RHO0,
@@ -173,6 +204,7 @@ def main():
         "design_levers_biophys_stdcoef": [
             {"feature": f, "coef": c, "direction": "higher->more stable" if c > 0 else "lower->more stable"}
             for f, c in levers],
+        "univariate_within_target_spearman": uni,
     }
     (OUT / "rank_metrics.json").write_text(json.dumps(report, indent=2))
 

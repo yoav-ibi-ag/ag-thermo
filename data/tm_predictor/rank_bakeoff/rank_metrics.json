@@ -4,11 +4,11 @@
   "headline": "LOO within-target Spearman (n-weighted), pairwise ranker",
   "results": {
     "esmc6b+nanomelt+biophys": {
-      "n_weighted_mean_spearman": 0.4611548815854108,
+      "n_weighted_mean_spearman": 0.45622168653557393,
       "per_target": {
         "Bemisia_tabaci__Heat_shock_proteins_70": {
           "n": 13,
-          "spearman": 0.21053358566534172
+          "spearman": 0.18283179807779676
         },
         "Bemisia_tabaci__Trehalase": {
           "n": 13,
@@ -32,12 +32,12 @@
         }
       }
     },
-    "esmc600+nanomelt+biophys": {
-      "n_weighted_mean_spearman": 0.45020427068846397,
+    "esmc600+nanomelt+biophys+struct": {
+      "n_weighted_mean_spearman": 0.4421611001677662,
       "per_target": {
         "Bemisia_tabaci__Heat_shock_proteins_70": {
           "n": 13,
-          "spearman": 0.14958965297274282
+          "spearman": 0.17729144056028776
         },
         "Bemisia_tabaci__Trehalase": {
           "n": 13,
@@ -49,15 +49,44 @@
         },
         "Helicoverpa_armigera__Chitin_synthase": {
           "n": 8,
+          "spearman": 0.6826469692905576
+        },
+        "Helicoverpa_armigera__Trehalase": {
+          "n": 14,
+          "spearman": -0.051114266410130144
+        },
+        "Spodoptera_frugiperda__Chitin_deacetylases": {
+          "n": 6,
+          "spearman": 0.41403933560541256
+        }
+      }
+    },
+    "esmc600+struct": {
+      "n_weighted_mean_spearman": 0.44041748341939385,
+      "per_target": {
+        "Bemisia_tabaci__Heat_shock_proteins_70": {
+          "n": 13,
+          "spearman": 0.1440492954552338
+        },
+        "Bemisia_tabaci__Trehalase": {
+          "n": 13,
+          "spearman": 0.754543190598314
+        },
+        "Helicoverpa_armigera__Chitin_deacetylases": {
+          "n": 19,
+          "spearman": 0.7188556515675448
+        },
+        "Helicoverpa_armigera__Chitin_synthase": {
+          "n": 8,
           "spearman": 0.6107893935757621
         },
         "Helicoverpa_armigera__Trehalase": {
           "n": 14,
-          "spearman": -0.031113031727905305
+          "spearman": -0.04000246936444968
         },
         "Spodoptera_frugiperda__Chitin_deacetylases": {
           "n": 6,
-          "spearman": 0.6210590034081188
+          "spearman": 0.41403933560541256
         }
       }
     },
@@ -90,8 +119,37 @@
         }
       }
     },
+    "esmc600+nanomelt+biophys": {
+      "n_weighted_mean_spearman": 0.4259434549872226,
+      "per_target": {
+        "Bemisia_tabaci__Heat_shock_proteins_70": {
+          "n": 13,
+          "spearman": 0.14958965297274282
+        },
+        "Bemisia_tabaci__Trehalase": {
+          "n": 13,
+          "spearman": 0.6768696268602523
+        },
+        "Helicoverpa_armigera__Chitin_deacetylases": {
+          "n": 19,
+          "spearman": 0.7338870735560421
+        },
+        "Helicoverpa_armigera__Chitin_synthase": {
+          "n": 8,
+          "spearman": 0.6107893935757621
+        },
+        "Helicoverpa_armigera__Trehalase": {
+          "n": 14,
+          "spearman": -0.06889314168321888
+        },
+        "Spodoptera_frugiperda__Chitin_deacetylases": {
+          "n": 6,
+          "spearman": 0.41403933560541256
+        }
+      }
+    },
     "esmc6b": {
-      "n_weighted_mean_spearman": 0.39113724480435214,
+      "n_weighted_mean_spearman": 0.38311679532288406,
       "per_target": {
         "Bemisia_tabaci__Heat_shock_proteins_70": {
           "n": 13,
@@ -99,7 +157,7 @@
         },
         "Bemisia_tabaci__Trehalase": {
           "n": 13,
-          "spearman": 0.4188824330159758
+          "spearman": 0.4743635499717342
         },
         "Helicoverpa_armigera__Chitin_deacetylases": {
           "n": 19,
@@ -111,11 +169,40 @@
         },
         "Helicoverpa_armigera__Trehalase": {
           "n": 14,
-          "spearman": 0.3933576154170885
+          "spearman": 0.30001852023337255
         },
         "Spodoptera_frugiperda__Chitin_deacetylases": {
           "n": 6,
           "spearman": 0.20701966780270628
+        }
+      }
+    },
+    "struct": {
+      "n_weighted_mean_spearman": 0.23947274210075195,
+      "per_target": {
+        "Bemisia_tabaci__Heat_shock_proteins_70": {
+          "n": 13,
+          "spearman": 0.41275663505441995
+        },
+        "Bemisia_tabaci__Trehalase": {
+          "n": 13,
+          "spearman": 0.23024663536639728
+        },
+        "Helicoverpa_armigera__Chitin_deacetylases": {
+          "n": 19,
+          "spearman": 0.22016612206681266
+        },
+        "Helicoverpa_armigera__Chitin_synthase": {
+          "n": 8,
+          "spearman": 0.29940656547831473
+        },
+        "Helicoverpa_armigera__Trehalase": {
+          "n": 14,
+          "spearman": -0.08444965754717154
+        },
+        "Spodoptera_frugiperda__Chitin_deacetylases": {
+          "n": 6,
+          "spearman": 0.6210590034081188
         }
       }
     },
@@ -145,6 +232,64 @@
         "Spodoptera_frugiperda__Chitin_deacetylases": {
           "n": 6,
           "spearman": -0.8280786712108251
+        }
+      }
+    },
+    "thermompnn": {
+      "n_weighted_mean_spearman": 0.1573305334101433,
+      "per_target": {
+        "Bemisia_tabaci__Heat_shock_proteins_70": {
+          "n": 13,
+          "spearman": 0.24377573077039566
+        },
+        "Bemisia_tabaci__Trehalase": {
+          "n": 13,
+          "spearman": 0.241342858757549
+        },
+        "Helicoverpa_armigera__Chitin_deacetylases": {
+          "n": 19,
+          "spearman": 0.24403955698972002
+        },
+        "Helicoverpa_armigera__Chitin_synthase": {
+          "n": 8,
+          "spearman": 0.5149792926227014
+        },
+        "Helicoverpa_armigera__Trehalase": {
+          "n": 14,
+          "spearman": -0.25557133205065075
+        },
+        "Spodoptera_frugiperda__Chitin_deacetylases": {
+          "n": 6,
+          "spearman": 0.0
+        }
+      }
+    },
+    "rosetta": {
+      "n_weighted_mean_spearman": 0.1377715968866689,
+      "per_target": {
+        "Bemisia_tabaci__Heat_shock_proteins_70": {
+          "n": 13,
+          "spearman": 0.16898090428402426
+        },
+        "Bemisia_tabaci__Trehalase": {
+          "n": 13,
+          "spearman": -0.10818817806372885
+        },
+        "Helicoverpa_armigera__Chitin_deacetylases": {
+          "n": 19,
+          "spearman": 0.41115360145007185
+        },
+        "Helicoverpa_armigera__Chitin_synthase": {
+          "n": 8,
+          "spearman": 0.0
+        },
+        "Helicoverpa_armigera__Trehalase": {
+          "n": 14,
+          "spearman": -0.1622322368669348
+        },
+        "Spodoptera_frugiperda__Chitin_deacetylases": {
+          "n": 6,
+          "spearman": 0.6210590034081188
         }
       }
     },
@@ -234,93 +379,273 @@
           "spearman": -0.41403933560541256
         }
       }
+    },
+    "biophys+struct": {
+      "n_weighted_mean_spearman": 0.008549258184749413,
+      "per_target": {
+        "Bemisia_tabaci__Heat_shock_proteins_70": {
+          "n": 13,
+          "spearman": 0.30194948470424005
+        },
+        "Bemisia_tabaci__Trehalase": {
+          "n": 13,
+          "spearman": -0.4521711031894308
+        },
+        "Helicoverpa_armigera__Chitin_deacetylases": {
+          "n": 19,
+          "spearman": 0.2617235828585403
+        },
+        "Helicoverpa_armigera__Chitin_synthase": {
+          "n": 8,
+          "spearman": -0.01197626261913259
+        },
+        "Helicoverpa_armigera__Trehalase": {
+          "n": 14,
+          "spearman": -0.07556021991062715
+        },
+        "Spodoptera_frugiperda__Chitin_deacetylases": {
+          "n": 6,
+          "spearman": -0.20701966780270628
+        }
+      }
     }
   },
   "design_levers_biophys_stdcoef": [
     {
-      "feature": "surfscore_sum",
-      "coef": 0.7893785717352285,
+      "feature": "tmpnn_frac_destab",
+      "coef": 1.854139382588917,
       "direction": "higher->more stable"
     },
     {
-      "feature": "sheet_aliphatic",
-      "coef": -0.597395007019587,
-      "direction": "lower->more stable"
-    },
-    {
-      "feature": "sap_mean",
-      "coef": -0.5480251161927383,
-      "direction": "lower->more stable"
-    },
-    {
-      "feature": "SAP_B_sap_score",
-      "coef": -0.42443055354802356,
-      "direction": "lower->more stable"
-    },
-    {
-      "feature": "iptm",
-      "coef": 0.35031024714125236,
-      "direction": "higher->more stable"
-    },
-    {
-      "feature": "sheet_instability",
-      "coef": -0.30472657507358836,
+      "feature": "tmpnn_site_worst_mean",
+      "coef": -1.1927134435332607,
       "direction": "lower->more stable"
     },
     {
       "feature": "hyd_patch_sasa_sum",
-      "coef": -0.29698601684044895,
+      "coef": -1.0760960609683505,
       "direction": "lower->more stable"
     },
     {
+      "feature": "tmpnn_ddg_mean",
+      "coef": -0.8780258394587065,
+      "direction": "lower->more stable"
+    },
+    {
+      "feature": "sap_sum",
+      "coef": -0.8646715880759549,
+      "direction": "lower->more stable"
+    },
+    {
+      "feature": "n_hyd_patches",
+      "coef": 0.811124609843894,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "tmpnn_ddg_std",
+      "coef": 0.6699620859293398,
+      "direction": "higher->more stable"
+    },
+    {
       "feature": "sheet_pI",
-      "coef": -0.28520065861488475,
+      "coef": -0.6148397517635004,
+      "direction": "lower->more stable"
+    },
+    {
+      "feature": "sheet_aliphatic",
+      "coef": -0.5863473059045924,
+      "direction": "lower->more stable"
+    },
+    {
+      "feature": "surfscore_sum",
+      "coef": 0.5627506411556346,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "iptm",
+      "coef": 0.5625420715195779,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "tmpnn_site_worst_sum",
+      "coef": -0.48619872792539554,
+      "direction": "lower->more stable"
+    },
+    {
+      "feature": "hyd_patch_sasa_mean",
+      "coef": 0.47434681404705525,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "SAP_B_sap_score",
+      "coef": -0.451778526823825,
       "direction": "lower->more stable"
     },
     {
       "feature": "nb_len",
-      "coef": 0.2424208206946617,
-      "direction": "higher->more stable"
-    },
-    {
-      "feature": "n_hyd_patches",
-      "coef": 0.160193475061384,
-      "direction": "higher->more stable"
-    },
-    {
-      "feature": "sap_max",
-      "coef": -0.1463816154068759,
+      "coef": -0.3677682380496364,
       "direction": "lower->more stable"
     },
     {
-      "feature": "hyd_patch_sasa_max",
-      "coef": 0.1438045657575358,
-      "direction": "higher->more stable"
+      "feature": "sap_max",
+      "coef": -0.34694217908713176,
+      "direction": "lower->more stable"
     },
     {
-      "feature": "hyd_patch_sasa_mean",
-      "coef": -0.13691697428707433,
+      "feature": "rosetta_reu_per_res",
+      "coef": -0.3095644297718905,
       "direction": "lower->more stable"
     },
     {
       "feature": "sap_pos_sum",
-      "coef": 0.09777801163650818,
+      "coef": 0.3006432120732773,
       "direction": "higher->more stable"
     },
     {
+      "feature": "tmpnn_ddg_min",
+      "coef": 0.2670716637440991,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "tmpnn_ddg_max",
+      "coef": 0.21920899911818856,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "sap_mean",
+      "coef": 0.16465118648508154,
+      "direction": "higher->more stable"
+    },
+    {
+      "feature": "rosetta_total_reu",
+      "coef": -0.1365580072546637,
+      "direction": "lower->more stable"
+    },
+    {
       "feature": "sheet_hydropathicity",
-      "coef": 0.09689646472250633,
+      "coef": -0.13470753283533882,
+      "direction": "lower->more stable"
+    },
+    {
+      "feature": "hyd_patch_sasa_max",
+      "coef": 0.0385185719679666,
       "direction": "higher->more stable"
     },
     {
       "feature": "surfscore_pos_sum",
-      "coef": 0.03089730952311112,
+      "coef": 0.029673053293547576,
       "direction": "higher->more stable"
     },
     {
-      "feature": "sap_sum",
-      "coef": 0.007129477001729634,
+      "feature": "sheet_instability",
+      "coef": 0.028166310160486534,
       "direction": "higher->more stable"
+    }
+  ],
+  "univariate_within_target_spearman": [
+    {
+      "feature": "SAP_B_sap_score",
+      "within_target_spearman": -0.2856666071660851
+    },
+    {
+      "feature": "sheet_aliphatic",
+      "within_target_spearman": -0.27126672951360636
+    },
+    {
+      "feature": "sap_pos_sum",
+      "within_target_spearman": -0.25442506463369835
+    },
+    {
+      "feature": "rosetta_reu_per_res",
+      "within_target_spearman": -0.23612453603621486
+    },
+    {
+      "feature": "rosetta_total_reu",
+      "within_target_spearman": -0.23360416601800468
+    },
+    {
+      "feature": "tmpnn_ddg_max",
+      "within_target_spearman": 0.18408630548585392
+    },
+    {
+      "feature": "sap_max",
+      "within_target_spearman": -0.16835693186623982
+    },
+    {
+      "feature": "sheet_hydropathicity",
+      "within_target_spearman": -0.16770801335655003
+    },
+    {
+      "feature": "surfscore_pos_sum",
+      "within_target_spearman": -0.14988280190762154
+    },
+    {
+      "feature": "tmpnn_ddg_mean",
+      "within_target_spearman": 0.14438747951520872
+    },
+    {
+      "feature": "sap_sum",
+      "within_target_spearman": -0.13460608318256856
+    },
+    {
+      "feature": "sheet_pI",
+      "within_target_spearman": -0.12958827281464888
+    },
+    {
+      "feature": "tmpnn_frac_destab",
+      "within_target_spearman": 0.12034586243276424
+    },
+    {
+      "feature": "surfscore_sum",
+      "within_target_spearman": 0.10066688592376073
+    },
+    {
+      "feature": "hyd_patch_sasa_mean",
+      "within_target_spearman": -0.09809718587271762
+    },
+    {
+      "feature": "hyd_patch_sasa_sum",
+      "within_target_spearman": -0.06618132029104423
+    },
+    {
+      "feature": "n_hyd_patches",
+      "within_target_spearman": 0.06271223275668751
+    },
+    {
+      "feature": "tmpnn_ddg_std",
+      "within_target_spearman": -0.048508183261877766
+    },
+    {
+      "feature": "nb_len",
+      "within_target_spearman": 0.04314132690366565
+    },
+    {
+      "feature": "sap_mean",
+      "within_target_spearman": -0.02766889612665825
+    },
+    {
+      "feature": "tmpnn_site_worst_mean",
+      "within_target_spearman": -0.01772074027475966
+    },
+    {
+      "feature": "tmpnn_site_worst_sum",
+      "within_target_spearman": -0.009624942593187573
+    },
+    {
+      "feature": "tmpnn_ddg_min",
+      "within_target_spearman": -0.004152683180252614
+    },
+    {
+      "feature": "iptm",
+      "within_target_spearman": -0.003075888209363775
+    },
+    {
+      "feature": "sheet_instability",
+      "within_target_spearman": 0.0025378787605141967
+    },
+    {
+      "feature": "hyd_patch_sasa_max",
+      "within_target_spearman": 0.001108450562034412
     }
   ]
 }

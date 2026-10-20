@@ -1,0 +1,18 @@
+<ROSETTASCRIPTS>
+  <SCOREFXNS>
+    <ScoreFunction name="ref15" weights="ref2015"/>
+  </SCOREFXNS>
+  <RESIDUE_SELECTORS/>
+  <TASKOPERATIONS/>
+  <FILTERS>
+    <ScoreType name="total" scorefxn="ref15" score_type="total_score" threshold="0" confidence="0"/>
+  </FILTERS>
+  <MOVERS>
+    <FastRelax name="relax" scorefxn="ref15" repeats="1"/>
+  </MOVERS>
+  <PROTOCOLS>
+    <Add mover="relax"/>
+    <Add filter="total"/>
+  </PROTOCOLS>
+  <OUTPUT scorefxn="ref15"/>
+</ROSETTASCRIPTS>

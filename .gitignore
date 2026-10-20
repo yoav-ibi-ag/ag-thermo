@@ -7,3 +7,4 @@ __pycache__/
 data/tm_predictor/_smoke*
 # large scratch dirs (regenerate via scripts)
 *.log
+data/tm_predictor/rosetta_scratch/
